@@ -3,8 +3,9 @@ Feature: Business rules
   As a Business
   I should be able to use the search functionality
 
-  @TableScenario
-  Scenario: search functionality
+  @TableParameterization
+  Scenario Outline: search functionality
+
     Given I am on homepage
     When I enter "<product>" into search bar
     Then I should see "<result>" in the search results
